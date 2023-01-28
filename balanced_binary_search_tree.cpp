@@ -201,7 +201,7 @@ int main()
 		cout << "The tree is balanced";
 	else
 		cout << "The tree is not balanced";
-	file(jsonData, "C:/Users/qumar/OneDrive/Desktop/output.json");
+	file(jsonData, "some_path_here");
 	freeTree(root);
 	return 0;
 }
