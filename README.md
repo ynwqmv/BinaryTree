@@ -177,3 +177,7 @@ int main()
 	return 0;
 }
 ```
+
+# Output
+ ![image](https://user-images.githubusercontent.com/112755279/215259133-7f240c6b-439a-47a5-8951-db3049639960.png)
+
