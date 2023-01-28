@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <vector>
 #include <nlohmann/json.hpp>
-
+#include <fstream>
 
 using namespace std;
 using json = nlohmann::json;
@@ -101,8 +101,10 @@ bool search(Node* node, int data)
 
 }
 
+
+ 
 void pushJson(Node* node, json& jsonData) {
-	if (node == nullptr) {
+	if (node == nullptr || jsonData == nullptr) {
 		return;
 	}
 	 
@@ -125,7 +127,7 @@ bool checkHeightBalance(Node* root, int* height) {
 	int l = 0, r = 0;
 
 	if (root == NULL) {
-		*height = 0;
+		*height = 0;	
 		return 1;
 	}
 
@@ -141,10 +143,31 @@ bool checkHeightBalance(Node* root, int* height) {
 		return l && r;
 }
 
+void file(json& jsonData, const char* path)
+{
+	if (jsonData == nullptr)
+	{
+		return;
+	}
+	ofstream out(path);
+	if (out.is_open())
+	{
+		out << jsonData.dump();
+		cout << "\nData was exported in output.json\n";
+	}
+	else
+	{
+		cout << "\nCouldn't open file\n";
+		out.close();
+	}
+	
+}
+
 int main()
 {
 	int height = 0;
 	json jsonData;
+	 
 	Node* root = nullptr;
 	
 	root = addNode(root, 28);
@@ -172,10 +195,13 @@ int main()
 	cout << endl;
 	cout << jsonData.dump(4);
 	cout << endl;
+
+	 
 	if (checkHeightBalance(root, &height))
 		cout << "The tree is balanced";
 	else
 		cout << "The tree is not balanced";
+	file(jsonData, "C:/Users/qumar/OneDrive/Desktop/output.json");
 	freeTree(root);
 	return 0;
 }
