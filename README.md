@@ -1,6 +1,11 @@
 # BinaryTree
 Binary Tree implementations | C++
 ![1_CMGFtehu01ZEBgzHG71sMg](https://user-images.githubusercontent.com/112755279/215258560-4a11c8ef-76c0-4dc7-85db-8c920fb01ffd.png)
+![image](https://user-images.githubusercontent.com/112755279/215840851-f715049a-f3ed-4479-b4f2-92024afe83c8.png)
+![image](https://user-images.githubusercontent.com/112755279/215841044-1d09eae6-de0e-4091-846c-43dce8152e2e.png)
+
+## Output
+![image](https://user-images.githubusercontent.com/112755279/215841185-b71f66d5-610c-4dd3-b12e-faaae6f3fcf2.png)
 
 ## Create Node
 
